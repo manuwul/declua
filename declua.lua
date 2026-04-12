@@ -1,7 +1,6 @@
----@class (exact) Declua
+---@class Declua
 ---@field cmds { list: string, install: string, uninstall: string }
 ---@field pkgs { ensure: { installed: table<string>, uninstalled: table<string> } }
----@field ensure_installed_pkgs table<string>
 ---@field list_pkgs function
 ---@field ensure_installed function
 ---@field ensure_uninstalled function
