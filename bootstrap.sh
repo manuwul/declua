@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-echo "[INFO]: INSTALLING GCC + MAKE"
-sudo pacman -S gcc make --noconfirm
 echo "[INFO]: DOWNLOADING LUA"
 curl -L -R -O https://www.lua.org/ftp/lua-5.5.0.tar.gz
 tar zxf lua-5.5.0.tar.gz

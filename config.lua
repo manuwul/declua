@@ -1,16 +1,19 @@
-declua.cmds = {
-	list = "pacman -Qqen",
-	install = "pacman -Sq --noconfirm",
-	uninstall = "pacman -Rs --noconfirm"
-}
+---@class Declua
+Declua = require("declua")
+---@type Declua
+---@diagnostic disable-next-line: lowercase-global
+declua = declua
 
-declua.pkgs.ensure = {
-	installed = {
+
+declua.pacman.enabled = true
+declua.pacman.pkgs = {
+	install = {
 		"kmines",
 		"gcc",
 		"make"
 	},
-	uninstalled = {
-		"gnome-sudoku"
+	uninstall = {
+		"gnome-sudoku",
+		"*"
 	}
 }
