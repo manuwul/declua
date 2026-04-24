@@ -8,5 +8,6 @@ setmetatable(env, {
 
 loadfile("./config.lua", "t", env)()
 
+env.declua:list_all()
 env.declua:ensure_installed()
 env.declua:ensure_uninstalled()
