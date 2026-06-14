@@ -6,13 +6,14 @@ declua = declua
 
 declua.logs.level = declua.logs.INFO
 
-declua.pacman.enabled = true
-declua.pacman.pkgs.install = {
+declua.pkg_mgrs.pacman.enabled = true
+declua.pkg_mgrs.pacman.pkgs.install = {
 	gcc = true,
 	make = true,
-	rlwrap = true
+	rlwrap = true,
+	["gnome-sudoku"] = true
 }
-declua.pacman.pkgs.uninstall = {
+declua.pkg_mgrs.pacman.pkgs.uninstall = {
 	["gnome-sudoku"] = true,
 	cosmic = true
 }

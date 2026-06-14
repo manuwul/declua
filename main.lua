@@ -1,6 +1,8 @@
 #!/usr/bin/env lua
 
-local env = { declua = require("declua"):new() }
+local env = {
+	declua = require("declua"):new()
+}
 
 setmetatable(env, {
 	__index = _G,
@@ -8,6 +10,6 @@ setmetatable(env, {
 
 loadfile("./config.lua", "t", env)()
 
-env.declua:list_all()
-env.declua:ensure_installed()
-env.declua:ensure_uninstalled()
+env.declua:prepare()
+env.declua:install()
+env.declua:uninstall()
